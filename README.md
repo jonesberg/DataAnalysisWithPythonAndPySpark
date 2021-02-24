@@ -1,4 +1,4 @@
-# PySparkInAction
+# Data Analysis with Python and PySpark
 
 This is the companion repository for the _Data Analysis with Python and PySpark_
 book (Manning, estimated publishing date: mid 2021.) It contains the source
