@@ -1,6 +1,17 @@
-from pyspark.sql.functions import col, explode, lower, regexp_extract, split
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import (
+    col,
+    explode,
+    lower,
+    regexp_extract,
+    split,
+)
 
-book = spark.read.text("./data/ch02/1342-0.txt")
+spark = SparkSession.builder.appName(
+    "Analyzing the vocabulary of Pride and Prejudice."
+).getOrCreate()
+
+book = spark.read.text("./data/gutenberg_books/1342-0.txt")
 
 lines = book.select(split(book.value, " ").alias("line"))
 
@@ -18,4 +29,4 @@ results = words_nonull.groupby(col("word")).count()
 
 results.orderBy("count", ascending=False).show(10)
 
-results.coalesce(1).write.csv("./results_single_partition.csv")
+results.coalesce(1).write.csv("./simple_count_single_partition.csv")

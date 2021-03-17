@@ -13,7 +13,7 @@ from pyspark.sql.functions import col, split, explode, lower, regexp_extract
 
 spark = SparkSession.builder.getOrCreate()
 
-book = spark.read.text("../../data/ch02/1342-0.txt")
+book = spark.read.text("../../data/gutenberg_books/1342-0.txt")
 
 lines = book.select(split(book.value, " ").alias("line"))
 

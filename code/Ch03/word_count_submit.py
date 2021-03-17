@@ -10,7 +10,7 @@ spark.sparkContext.setLogLevel("WARN")
 
 # If you need to read multiple text files, replace `1342-0` by `*`.
 results = (
-    spark.read.text("./data/Ch02/1342-0.txt")
+    spark.read.text("../../data/gutenberg_books/1342-0.txt")
     .select(F.split(F.col("value"), " ").alias("line"))
     .select(F.explode(F.col("line")).alias("word"))
     .select(F.lower(F.col("word")).alias("word"))
