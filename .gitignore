@@ -20,14 +20,14 @@ drawings/
 manuscript/chapter_revisions
 
 # Large data files
-data/Ch04/BroadcastLogs_2018_Q3_M8.CSV
+data/broadcast_logs/BroadcastLogs_2018_Q3_M8.CSV
 
 # Scribbles
 scribbles.*
 
 # Data files from Chapter 7 that are too big to be git-ted. Better to download them using the script
-/data/Ch07/*.zip
-/data/Ch07/d*
+/data/backblaze/*.zip
+/data/backblaze/d*
 
 # References for chapters and appendixes
 chapter_reference.txt
