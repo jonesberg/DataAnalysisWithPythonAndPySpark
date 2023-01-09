@@ -1,7 +1,7 @@
 # Data Analysis with Python and PySpark
 
 This is the companion repository for the _Data Analysis with Python and PySpark_
-book (Manning, estimated publishing date: 2022.) It contains the source
+book (Manning, 2022). It contains the source
 code and data download scripts, when pertinent.
 
 ## Get the data
