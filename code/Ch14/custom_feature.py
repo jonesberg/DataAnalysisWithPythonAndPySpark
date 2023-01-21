@@ -119,7 +119,7 @@ class ScalarNAFiller(
                 answer = answer.withColumn(out_col, F.col(in_col))
 
         na_filler = self.getFiller()
-        return dataset.fillna(na_filler, output_columns)
+        return answer.fillna(na_filler, output_columns)
 
 
 class _ExtremeValueCapperParams(
